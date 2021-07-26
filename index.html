@@ -26,6 +26,19 @@
         i'll change my major to Computer-Science.
     </p>
 
+    <h3>My Top Ten Things</h3>
+    <ol>
+        <li>Faith</li>
+        <li>Music</li>
+        <li>Photography</li>
+        <li>Videography</li>
+        <li>Track</li>
+        <li>Gym</li>
+        <li>Food</li>
+        <li>Working</li>
+        <li>Money</li>
+        <li>Sleeping</li>
+    </ol>
 
     
 
@@ -118,62 +131,129 @@ div {
     
     let yourName = prompt("What's up, can you let me know your name?");
     console.log(yourName);
+    let userscore = 0;
     alert("Ayee " + yourName + " let's play Keaton's guessing game");
 
     
     let myName = prompt("Was I given my name because of my Mother? y/n?").toLowerCase();
     
     if (myName === "y" || myName === "yes") {
-        alert("Oh Yuhhh, nice start!!")
+        alert("Oh Yuhhh, nice start!!");
+        userscore += 3;
     } 
+
     
     else {
-        alert("Nah, but it's straight just bounce back next question!")
+        alert("Nah, but it's straight just bounce back next question!");
     }
 
 
     let myHobby = prompt("Is my hobby that I like to do in my spare time Photograpy ? y/n?").toLowerCase();
     
     if(myHobby === "yes" || myHobby === "y") {
-        alert("Yesssirr, keep it up " + yourName + "!!!")
+        alert("Yesssirr, keep it up " + yourName + "!!!");
+        userscore += 3;
     } 
     
     else {
-        alert("Dang fam you're wrong again")
+        alert("Dang fam you're wrong again"),
     }
 
 
     let athlete = prompt("Am I an athlete? y/n?");
     
     if (athlete === "y" || athlete === "yes") {
-        alert("You on a roll fam, keep it going!!")
+        alert("You on a roll fam, keep it going!!");
+        userscore += 3;
     }
 
     else {
-        alert("You're yet wrong again " + yourName)
+        alert("You're yet wrong again " + yourName);
+        userscore += 3;
     }
 
 
     let mySport = prompt("Do I play fooball? y/n?");
 
     if (mySport === "n" || mySport === "no") {
-        alert("Good-job, just one more left!")
+        alert("Good-job, just one more left!");
+        userscore += 3;
     }
 
     else {
-        alert("Dang dont end on a bad foot...")
+        alert("Dang dont end on a bad foot...");
+        userscore += 3;
     }
 
 
     let simp = prompt("Are you a simp " + yourName + "?")
 
     if (simp === "n" || simp === "no") {
-        alert("You better not be lolll. No simps round' here!!")
+        alert("You better not be lolll. No simps round' here!!");
+        userscore += 3;
     }
 
     else {
-        alert("That's a shame..")
+        alert("That's a shame..");
+        userscore += 3,
     }
+
+    let guessNumber = "Guess a number 1-10";
+    let attempts = 3
+    let answer = 8;
+    let respone = null;
+
+    while(response !== answer) {
+
+        if(!attempts){
+          alert("You're out of chances.");
+          break;
+        }
+        
+        response = parseInt(prompt(guessNumber));
+        attempts -= 1;
+        if (response === answer){
+            alert("Well Done");
+            userscore += 3
+        }
+
+        if (response < answer){
+            alert("Dont screw this up, number too low. You got 3 tries " + yourName);
+
+        } 
+
+        if (response > answer){
+            alert("Dont screw this up, number too high. You got 3 tries " + yourName);
+        }
+    
+    }
+    
+    let guessOption = "Guess my favorite track event";
+    let answers = ["800", "1500"];
+    response = null;
+    attempts = 5;
+
+    hasAttempts: while (attempts) {
+
+        response = prompt(guessOption + ", you get " + attempts + " attempts").toLowerCase();
+        attempts -= 1;
+
+        for (le i = 0; i < answers.length; i++){
+            if (response === answers[i]) {
+                alert("Nice work " + yourName + " You've reached the end!!!");
+                userscore += 3;
+                break hasAttempts;
+            }
+        }
+
+        alert("Dang you're actually not finished.");
+    }
+
+    if (!attempts){
+      alert("You ran out of tries. Try again another time...");
+    }
+
+    alert("Good-job " + name + ". You scored " + userscore + " out of 21 points");
 
 </script>
 
