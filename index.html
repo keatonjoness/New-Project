@@ -60,7 +60,6 @@ p {
     color: red;
     font-family: 'Otomanopee One', sans-serif;
     font-size: large;
-    text float: 
 }
 
 h1{
@@ -156,7 +155,7 @@ div {
     } 
     
     else {
-        alert("Dang fam you're wrong again"),
+        alert("Dang fam you're wrong again");
     }
 
 
@@ -195,7 +194,7 @@ div {
 
     else {
         alert("That's a shame..");
-        userscore += 3,
+        userscore += 3;
     }
 
     let guessNumber = "Guess a number 1-10";
@@ -238,7 +237,7 @@ div {
         response = prompt(guessOption + ", you get " + attempts + " attempts").toLowerCase();
         attempts -= 1;
 
-        for (le i = 0; i < answers.length; i++){
+        for (let i = 0; i < answers.length; i++) {
             if (response === answers[i]) {
                 alert("Nice work " + yourName + " You've reached the end!!!");
                 userscore += 3;
