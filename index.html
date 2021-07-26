@@ -1,26 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Photography</title>
 </head>
+
 <body>
     <h1>Welcome To My Website </h1>
 
-    <p> 
-        My name is Keaton Jones. I'm 21 years old. 
+    <p>
+        My name is Keaton Jones. I'm 21 years old.
         I am new to coding and web development. <br>
         I attended SEMO for college back in 2018-2019.
         My major was Cyber-Security, which was back. <br>
-        On December I came back home and went to Southwest, 
+        On December I came back home and went to Southwest,
         but I took a year off through 2020 due to COVID. <br>
-        While taking that year off I took the time to 
+        While taking that year off I took the time to
         pursue Photography. I plan on going back to Southwest <br>
         for one more semester and then I'll go to the UofM or TSU. <br>
-        If I go to the UofM then I will likely run track for Memphis. 
+        If I go to the UofM then I will likely run track for Memphis.
         Running track will help me pay for school. <br>
         Instead of majoring in Cyber-Security <br>
         i'll change my major to Computer-Science.
@@ -40,127 +41,90 @@
         <li>Sleeping</li>
     </ol>
 
-    
 
 
-<div>
-    <img src="https://gosoutheast.com/images/2019/8/15/Keaton_Jones_20190812_CB_cropped.jpg" width="300" height="200"> 
-</div>
+
+    <div>
+        <img src="https://gosoutheast.com/images/2019/8/15/Keaton_Jones_20190812_CB_cropped.jpg" width="300"
+            height="200">
+    </div>
 
 </body>
+
 </html>
 
-<style> 
+<style>
+    body {
+        background-image: url(https://petapixel.com/assets/uploads/2016/03/skatevideofeat.jpg)
+    }
 
-body {
-    background-image: url(https://petapixel.com/assets/uploads/2016/03/skatevideofeat.jpg)
-}
+    p {
+        color: red;
+        font-family: 'Otomanopee One', sans-serif;
+        font-size: large;
+    }
 
-p {
-    color: red;
-    font-family: 'Otomanopee One', sans-serif;
-    font-size: large;
-}
+    h1 {
+        text-align: center;
+        font-family: 'Otomanopee One', sans-serif;
+        font-size: xx-large;
+        color: red;
+    }
 
-h1{
-    text-align: center;
-    font-family: 'Otomanopee One', sans-serif;
-    font-size: xx-large;
-    color: red;
-}
+    img {
+        width: 30%;
+        height: 30%;
+        margin: auto;
+        display: block;
+    }
 
-img {
-    width: 30%;
-    height: 30%;
-    margin: auto;
-    display: block;
-}
-
-div {
-    border-width: medium;
-
-
-}
-    
-   
+    div {
+        border-width: medium;
 
 
-
-
-
-
-    </style> 
+    }
+</style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
-    
+
     let yourName = prompt("What's up, can you let me know your name?");
     console.log(yourName);
     let userscore = 0;
     alert("Ayee " + yourName + " let's play Keaton's guessing game");
 
-    
+
     let myName = prompt("Was I given my name because of my Mother? y/n?").toLowerCase();
-    
+
     if (myName === "y" || myName === "yes") {
         alert("Oh Yuhhh, nice start!!");
         userscore += 3;
-    } 
+    }
 
-    
+
     else {
         alert("Nah, but it's straight just bounce back next question!");
     }
 
 
     let myHobby = prompt("Is my hobby that I like to do in my spare time Photograpy ? y/n?").toLowerCase();
-    
-    if(myHobby === "yes" || myHobby === "y") {
+
+    if (myHobby === "yes" || myHobby === "y") {
         alert("Yesssirr, keep it up " + yourName + "!!!");
         userscore += 3;
-    } 
-    
+    }
+
     else {
         alert("Dang fam you're wrong again");
     }
 
 
     let athlete = prompt("Am I an athlete? y/n?");
-    
+
     if (athlete === "y" || athlete === "yes") {
         alert("You on a roll fam, keep it going!!");
         userscore += 3;
@@ -198,35 +162,35 @@ div {
     }
 
     let guessNumber = "Guess a number 1-10";
-    let attempts = 3
+    let attempts = 3;
     let answer = 8;
-    let respone = null;
+    let response = null;
 
-    while(response !== answer) {
+    while (response !== answer) {
 
-        if(!attempts){
-          alert("You're out of chances.");
-          break;
+        if (!attempts) {
+            alert("You're out of chances.");
+            break;
         }
-        
+
         response = parseInt(prompt(guessNumber));
         attempts -= 1;
-        if (response === answer){
+        if (response === answer) {
             alert("Well Done");
-            userscore += 3
+            userscore += 3;
         }
 
-        if (response < answer){
+        if (response < answer) {
             alert("Dont screw this up, number too low. You got 3 tries " + yourName);
 
-        } 
+        }
 
-        if (response > answer){
+        if (response > answer) {
             alert("Dont screw this up, number too high. You got 3 tries " + yourName);
         }
-    
+
     }
-    
+
     let guessOption = "Guess my favorite track event";
     let answers = ["800", "1500"];
     response = null;
@@ -248,8 +212,8 @@ div {
         alert("Dang you're actually not finished.");
     }
 
-    if (!attempts){
-      alert("You ran out of tries. Try again another time...");
+    if (!attempts) {
+        alert("You ran out of tries. Try again another time...");
     }
 
     alert("Good-job " + name + ". You scored " + userscore + " out of 21 points");
