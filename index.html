@@ -109,8 +109,8 @@
     let userscore = 0;
     alert("Ayee " + yourName + " let's play Keaton's guessing game");
 
-
-    let myName = prompt("Was I given my name because of my Mother? y/n?").toLowerCase();
+    function nameQuestion() {
+        let myName = prompt("Was I given my name because of my Mother? y/n?").toLowerCase();
 
     if (myName === "y" || myName === "yes") {
         alert("Oh Yuhhh, nice start!!");
@@ -121,33 +121,40 @@
     else {
         alert("Nah, but it's straight just bounce back next question!");
     }
+}
 
-
+   function hobbyQuestion() {
     let myHobby = prompt("Is my hobby that I like to do in my spare time Photograpy ? y/n?").toLowerCase();
 
     if (myHobby === "yes" || myHobby === "y") {
-        alert("Yesssirr, keep it up " + yourName + "!!!");
-        userscore += 3;
+    alert("Yesssirr, keep it up " + yourName + "!!!");
+    userscore += 3;
     }
 
     else {
-        alert("Dang fam you're wrong again");
+    alert("Dang fam you're wrong again");
     }
 
+}
+    
 
+function athleteQuestion() {
     let athlete = prompt("Am I an athlete? y/n?");
 
     if (athlete === "y" || athlete === "yes") {
-        alert("You on a roll fam, keep it going!!");
-        userscore += 3;
+    alert("You on a roll fam, keep it going!!");
+    userscore += 3;
     }
 
     else {
-        alert("You're yet wrong again " + yourName);
-        userscore += 3;
+    alert("You're wrong again " + yourName);
+    userscore += 3;
     }
 
+}
 
+
+function footballQuestion() {
     let mySport = prompt("Do I play fooball? y/n?");
 
     if (mySport === "n" || mySport === "no") {
@@ -159,8 +166,10 @@
         alert("Dang dont end on a bad foot...");
         userscore += 3;
     }
+}
 
 
+function simpQuestion() { 
     let simp = prompt("Are you a simp " + yourName + "?")
 
     if (simp === "n" || simp === "no") {
@@ -172,6 +181,9 @@
         alert("That's a shame..");
         userscore += 3;
     }
+}
+    
+
 
     let guessNumber = "Guess a number 1-10";
     let attempts = 3;
@@ -229,6 +241,8 @@
     }
 
     alert("Good-job " + name + ". You scored " + userscore + " out of 21 points");
+     
+    
 
 </script>
 
